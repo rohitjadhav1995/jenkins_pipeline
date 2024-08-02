@@ -1,13 +1,21 @@
 pipeline {
     agent any
-    options {
-        timeout(time: 30, unit: 'MINUTES') 
-    }
+
     stages {
-        stage('Example') {
+        stage('build') {
             steps {
                 echo 'Hello World'
             }
         }
-    }
-}
+        stage('test') {
+            steps {
+                echo 'Hello rohit'
+            } 
+        }
+        stage('sonar analyse') {
+            steps {
+                echo 'Hello akhil'
+            } 
+        }        
+    } 
+} 
